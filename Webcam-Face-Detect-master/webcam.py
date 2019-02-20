@@ -54,4 +54,21 @@ while True:
 # When everything is done, release the capture
 video_capture.release()
 cv2.destroyAllWindows()
+
+            dutycycle+=1
+       
+            
+        '''
+        Drawing a rectangle using x,y as initial coordinates and then using width and height.
+        '''
+
+    # Display the resulting frame
+    #cv2.imshow('Video', frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'): #press q to exit the capture mode
+        break
+
+# When everything is done, release the capture
+video_capture.release()
+cv2.destroyAllWindows()
 .destroyAllWindows()
