@@ -3,12 +3,14 @@ cascPath = "haarcascade_frontalface_default.xml" #there is an xml file named thi
 faceCascade = cv2.CascadeClassifier(cascPath) #used cascade classifier 
 
 video_capture = cv2.VideoCapture(0) #videocapture for starting to capture video
-
+Fx=240
+Fy=320
 while True:
     # Capture frame-by-frame
     #video_capture.read()
     video_capture.grab()
     retrival, frame = video_capture.retrieve(0)
+    
     
     '''
     2 parameters returned,a ret,which is in boolean which says the capture is true or not
@@ -25,11 +27,20 @@ while True:
     )#this function and its parameters specify the way face detection is done
 
     # Draw a rectangle around the faces
+    dutycycle=7.5
     for (x, y, w, h) in faces: 
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         cX=(x+(w/2))
-        cY=(y+(h/2))
-        print(cX,cY)
+        
+        print(Fx-cX)
+        if Fx-cX>0:
+            #negative rotation of servoX
+           dutycycle-=1 
+        if Fx-cX<0:
+            #postive rotation of servoX
+            dutycycle+=1
+       
+            
         '''
         Drawing a rectangle using x,y as initial coordinates and then using width and height.
         '''
@@ -43,3 +54,4 @@ while True:
 # When everything is done, release the capture
 video_capture.release()
 cv2.destroyAllWindows()
+.destroyAllWindows()
