@@ -9,5 +9,9 @@ http://embeddedlaboratory.blogspot.com/2017/03/serial-communication-in-raspberry
 
 WE completed the project.The project structure looked like a wall -E robot.
 <img src="https://i.ebayimg.com/images/g/RpYAAOSwie5XTUWi/s-l300.jpg" label="label1" />
-It consisted of :
-Movements of hand and other parts 
+<br>It consisted of :</br>
+1)Movements of hand and other parts was done and the movement was initiated by google assistant voice input.
+
+2)Google assistant sdk was used for voice talkback.
+
+3)The head movement was such that head would rotate and track the faces of the people appearing infront of it.
