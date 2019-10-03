@@ -11,17 +11,15 @@ void setup()
 
 }
 
-void tata()
+void tata() // function for waving motion of the robots arm
 {
   sm1.write(0);
-  
-
   for(int i=1;i<=3;++i)
    {
     for(int j=666;j<=2000;j+=5)
      {
-      s1.writeMicroseconds(j);
-      delayMicroseconds(5000);
+      s1.writeMicroseconds(j); // writeMicroseconds keyword used for smoother operation of the servo motor
+      delayMicroseconds(5000); 
      }
     for(int k=2000;k>=666;k-=5)
      {
